@@ -1,0 +1,56 @@
+$menung :1rem;
+
+}
+
+    #hd
+    {
+        padding: 10px 35px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px solid beige; 
+
+        h1{
+            a{ img{
+
+            } 
+         }
+        }
+        li{}
+        .gnb{
+            display: flex;
+            margin-right: 2rem;
+            
+            li{margin-right: $menung;
+                a{
+
+                }
+            }
+        }
+
+        .iconMenu{
+            display: flex;
+            margin-left: 1rem;
+            li{
+                i{
+                    
+                }
+                span{
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    display: block;
+                    overflow: hidden;
+                    opacity: 0;
+                }
+            }
+                
+        }
+
+        .mender{
+            display: flex;
+            margin-left: 1rem;
+            li{
+                a{}
+            }
+        }
+    }
