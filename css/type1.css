@@ -1,3 +1,6 @@
-.max-width-1824 {
-  max-width: 1824px !important;
+#hd h1 .iconMenu {
+  width: 0;
+}
+#hd h1 .a {
+  white-space: nowrap;
 }
