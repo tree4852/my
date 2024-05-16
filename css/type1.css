@@ -2,25 +2,33 @@ a {
   text-decoration: none;
 }
 
-#hd .gnb .big_menu:hover ul {
-  display: block;
+#hd .gnb:hover ul {
+  max-height: 300px !important;
 }
 #hd .gnb .big_menu a {
   color: black !important;
 }
 #hd .gnb .big_menu ul {
-  min-width: 56px;
+  min-width: 80px;
   white-space: nowrap;
-  margin-top: 28px !important;
   background-color: black !important;
-  display: none;
-  transition: 3s !important;
+  max-height: 0;
+  transition: max-height 1.2s;
+  overflow: hidden;
+  padding: 0 1rem !important;
+  border: 0 !important;
+  margin-top: 28px !important;
+}
+#hd .gnb .big_menu ul:before, #hd .gnb .big_menu ul:after {
+  content: "";
+  display: block;
+  height: 16px;
 }
 #hd .gnb .big_menu ul.leftul {
   left: -2rem;
 }
 #hd .gnb .big_menu ul li {
-  padding: 0 25px;
+  width: 180px !important;
 }
 #hd .gnb .big_menu ul li a {
   color: white !important;

@@ -6,13 +6,14 @@ a{
 #hd{
     
     .gnb{
-        
+        &:hover{
+            ul{
+                max-height:300px !important;
+                
+            }
+        }
             .big_menu{
-                &:hover{
-                    ul{display: block;
-                       
-                    }
-                }
+                
                 
                 a{
                     
@@ -22,17 +23,30 @@ a{
                 
                 ul{
                     //소메뉴
-                    
-                    min-width: 56px;
+
+                    min-width: 80px;
                     white-space: nowrap;
-                    margin-top: 28px !important;
                     background-color: black !important;
-                    display: none;
-                    transition: 3s !important;
-                    
+                    max-height: 0;
+                    transition: max-height 1.2s;
+                    overflow: hidden;
+                    padding: 0 1rem !important;
+                    border:0 !important;
+                    margin-top: 28px !important;
+                    &:before,
+                    &:after{
+                        content: "";
+                        display: block;
+                        height: 16px;
+                        
+
+                    }
                     &.leftul{
                          left:-2rem;}
-                    li{padding: 0 25px;
+                    li
+                    {width: 180px !important;
+                        
+                        
                         a{
                             color: white !important;
                         }
