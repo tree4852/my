@@ -1,9 +1,14 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
 }
 
 #hd .gnb:hover ul {
-  max-height: 300px !important;
+  height: 300px !important;
+  min-width: 120px;
+}
+#hd .gnb > li:hover > a {
+  color: red !important; /* 변경된 부분 */
 }
 #hd .gnb .big_menu a {
   color: black !important;
@@ -12,24 +17,29 @@ a {
   min-width: 80px;
   white-space: nowrap;
   background-color: black !important;
-  max-height: 0;
+  height: 1px;
   transition: max-height 1.2s;
   overflow: hidden;
   padding: 0 1rem !important;
   border: 0 !important;
   margin-top: 28px !important;
+  left: -80px;
+  padding-left: 80px !important;
 }
 #hd .gnb .big_menu ul:before, #hd .gnb .big_menu ul:after {
   content: "";
   display: block;
-  height: 16px;
+  height: 20px;
 }
 #hd .gnb .big_menu ul.leftul {
   left: -2rem;
 }
 #hd .gnb .big_menu ul li {
-  width: 180px !important;
+  width: 150px !important;
 }
 #hd .gnb .big_menu ul li a {
   color: white !important;
+}
+#hd .gnb .big_menu ul li a:hover {
+  color: red !important;
 }

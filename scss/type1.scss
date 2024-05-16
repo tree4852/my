@@ -6,12 +6,28 @@ a{
 #hd{
     
     .gnb{
+
+       
+        
         &:hover{
+            
             ul{
-                max-height:300px !important;
+                height:300px !important;
+                min-width: 120px;
                 
+
             }
+            
+            
         }
+        >li:hover{
+                
+             >a{color: red !important; /* 변경된 부분 */}
+            
+        }
+        
+
+        
             .big_menu{
                 
                 
@@ -27,28 +43,33 @@ a{
                     min-width: 80px;
                     white-space: nowrap;
                     background-color: black !important;
-                    max-height: 0;
+                    height: 1px;
                     transition: max-height 1.2s;
                     overflow: hidden;
                     padding: 0 1rem !important;
                     border:0 !important;
                     margin-top: 28px !important;
+                    left: -80px;
+                    padding-left: 80px !important;
                     &:before,
                     &:after{
                         content: "";
                         display: block;
-                        height: 16px;
+                        height: 20px;
                         
 
                     }
                     &.leftul{
                          left:-2rem;}
                     li
-                    {width: 180px !important;
+                    {width: 150px !important;
                         
                         
                         a{
                             color: white !important;
+                            &:hover{
+                                color:red !important;
+                            }
                         }
                     }
                 }
@@ -65,3 +86,18 @@ a{
         
     
 }
+
+
+
+// .gnb{
+//     &:hover{
+//         ul{
+//             height: 180px;
+//         }
+//     }
+
+//     ul{
+//         top: 100%;
+//         min-width: ;
+//     }
+// }
