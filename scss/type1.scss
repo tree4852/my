@@ -102,88 +102,72 @@
 // //     }
 // // }
 
-#hd {
+a{
+    text-decoration: none;
+    color: black;
+}
+#hd{
+    position: relative;
     h1,
-    .iconMenu {
-        width: 0;
+    .iconMenu{
+        width:0;
     }
-    h1 {
-        a {
+    h1{
+        a{
             white-space: nowrap;
         }
     }
     .gnb {
-        .gnb_li {
-            &:hover {
-                .gnb_a {
-                    color: red; // 활성화
-                }
-                .gnb_ul {
-                    max-height: 180px; // 각각의 사이즈가 다르기 때문에 max-height로 해야됨
-                    padding: 0 1.5rem;
-                    border-bottom: 1px solid #ccc;
-                    transition: max-height 1.2s ease, border-radius 0.5s ease 0.5s; // border-radius에 지연 시간 추가
-                    border-radius: 0 0 30px 30px;//보더가 내려왔을때 생기려면 하버에 넣어야함
-                    border-top: 1px solid #ccc;
-                }
-                &:after {
-                    transition: 0.5s;
-                }
-                
+        &:before{
+            content: "";
+            position: absolute;
+            left:0; right:0;
+            top:100%;
+            height:0;
+            transition: 0.5s;
+            background-color: rgba(255,255,255,.8) !important;
+        }
+        &:hover{
+            &:before{
+                height:180px;
             }
-
-            .gnb_ul_li{
+            .gnb_li{
                 &:hover{
-                    a{color: orange;
-
+                    .gnb_a {
+                        color:red; //활성화
                     }
-
                 }
-                
-                
+                .gnb_ul{
+                    height:180px;
+                }
             }
+        }
+        .gnb_li{
+            padding: 0 35px !important;
             .gnb_a {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
-            .gnb_ul {
-                min-width: 10rem !important; //소메뉴의 넓이
-                background-color: white !important;
-                margin-top: -1px !important;//부모요소와 곂치지않게 조정
-                top: 100% !important; //위를 기준으로부터 100% 내려온다
-                border: 1px solid #ccc;
-                border-top: 0 !important; //보더라인 안보이게
-                border-bottom: 0;
-                border-radius: 0 0;
+            .gnb_ul{
+                min-width:10rem;
                 overflow: hidden;
-                transform: translateX(-50%);
-                left: 50%;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 1.2s ease, border-radius 1.1s ease;
-                
+                height: 0;
+                transition:  0.5s;
+                left:-32px;
+                text-align: center;
                 &:after,
-                &:before {
+                &:before{
                     content: "";
                     display: block;
                     height: 1rem;
-                }
-                &:after {
-                    // border-bottom: 1px solid #ccc;
                 }
             }
         }
     }
 }
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
-
-   
 
 
 
-//     링크색.언더라인
-// }
+
+
+
