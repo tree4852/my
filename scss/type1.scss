@@ -1,0 +1,120 @@
+$display-flex: flex !important;
+$justify-center: center !important;
+$align-center: center !important;
+$align-end: end !important;
+$justify-content: space-between !important;
+
+
+// Mixin for flex-center properties
+@mixin flex-center {
+  display: $display-flex;
+  justify-content: $justify-center;
+  align-items: $align-center;
+}
+
+// @mixin flex-center_bet {
+//     display: $display-flex;
+//     justify-content: $justify-space-between;
+//     align-items: $align-center;
+//   }
+
+.rel {
+  position: relative !important;
+}
+
+.abs {
+  position: absolute !important;
+}
+
+.d-flex {
+  display: $display-flex;
+}
+
+.jcc {
+  justify-content: $justify-center;
+}
+
+.aic {
+  align-items: $align-center;
+}
+
+.aie {
+  align-items: $align-end;
+}
+
+.flexcenter {
+  @include flex-center;
+}
+.jcb{
+    justify-content: space-between;
+}
+// .flex_bet {
+//     @include flex-center_bets;
+// }
+
+a{text-decoration: none !important;
+color: black;}
+li{list-style: none !important;}
+
+#hd{
+    padding: 0 3rem;
+    h1{
+        font-size: 20px;
+
+    }
+    .gnb{
+        &:hover{
+            &:before{
+                height:calc(13rem + 20px);//공백 맞추어야 기호 적용됨
+
+            }
+            .gnb_li{
+
+                .gnb_a{
+                }
+                .gnb_ul{
+                    height:calc(13rem + 20px);
+                    .gnb_ul_li{
+                        
+    
+                    }
+                }
+            }
+
+        }///gnb hover 상태임
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            right: 0;
+            height: 0;
+            background-color: rgba(0,0,0,.5);
+            transition: 0.5s;
+
+
+        }
+        .gnb_li{
+            line-height: 2;
+            .gnb_a{//대메뉴 a
+                padding: 0 2rem;
+                display: block;//인라인 태그 블럭처리 하여야함
+                font-size: 1.3rem;
+                line-height: 100px;//가장큰객체의 높이를 넣어줘서 맞춰준다.
+            }
+            .gnb_ul{
+               
+                top: 100%;
+                left: 0;
+                min-width: 120px;
+                height: 0;
+                overflow: hidden;
+                transition: 0.5s;
+
+                .gnb_ul_li{
+
+                }
+            }
+        }
+    }
+}

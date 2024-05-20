@@ -1,0 +1,82 @@
+.rel {
+  position: relative !important;
+}
+
+.abs {
+  position: absolute !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.jcc {
+  justify-content: center !important;
+}
+
+.aic {
+  align-items: center !important;
+}
+
+.aie {
+  align-items: end !important;
+}
+
+.flexcenter {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+li {
+  list-style: none !important;
+}
+
+#hd {
+  padding: 0 3rem;
+}
+#hd h1 {
+  font-size: 20px;
+}
+#hd .gnb:hover:before {
+  height: calc(13rem + 20px);
+}
+#hd .gnb:hover .gnb_li .gnb_ul {
+  height: calc(13rem + 20px);
+}
+#hd .gnb:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#hd .gnb .gnb_li {
+  line-height: 2;
+}
+#hd .gnb .gnb_li .gnb_a {
+  padding: 0 2rem;
+  display: block;
+  font-size: 1.3rem;
+  line-height: 100px;
+}
+#hd .gnb .gnb_li .gnb_ul {
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
